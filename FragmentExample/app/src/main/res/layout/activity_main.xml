@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dfb.com.fragmentexample.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/btn_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/lyt_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="10">
+
+        <fragment
+            android:id="@+id/fragmt_red"
+            android:name="dfb.com.fragmentexample.RedFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            tools:layout="@layout/fragment_red"/>
+
+        <fragment
+            android:id="@+id/fragmt_blue"
+            android:name="dfb.com.fragmentexample.BlueFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            tools:layout="@layout/fragment_blue"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
